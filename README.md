@@ -16,19 +16,22 @@ Live link: [link] https://coffee-shop-frontend-one.vercel.app/
 
 ## Components
 
-- [ ] Navbar
-- [ ] Footer
-- [ ] Button
-- [ ] Loader
-- [ ] Toast
-- [ ] ProductCard
-- [ ] CartItem
-- [ ] CartSummary
+# Coffee Shop Frontend
+
+## Components
+- Navbar
+- Footer
+- Button
+- Loader
+- Toast
+- ProductCard
+- CartItem
+- CartSummary
 
 ## Features
-- [ ] Tailwind CSS with DaisyUI integration.
-- [ ] Storybook for component development.
-- [ ] Component stubs for all components.
+-  Tailwind CSS with DaisyUI integration.
+-  Storybook for component development.
+-  Component stubs for all components.
 
 ## Setup
 If you would like to try this project out or contribute, follow these steps:
