@@ -12,5 +12,10 @@ const geistMono = Geist_Mono({
 });
 
 export default function Home() {
-  return <h1>Coffee Shop Frontend Splash Page</h1>
+  return (
+  <div>
+    <h1>Coffee Shop Frontend Splash Page</h1>
+    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Button</button>
+  </div>
+  )
 }
