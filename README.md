@@ -16,14 +16,17 @@ Live link: [link] https://coffee-shop-frontend-one.vercel.app/
 
 ## Components
 
-- [ ] Navbar
-- [ ] Footer
-- [ ] Button
-- [ ] Loader
-- [ ] Toast
-- [ ] ProductCard
-- [ ] CartItem
-- [ ] CartSummary
+# Coffee Shop Frontend
+
+## Components
+- Navbar
+- Footer
+- Button
+- Loader
+- Toast
+- ProductCard
+- CartItem
+- CartSummary
 
 ## Features
 - [ ] Tailwind CSS with DaisyUI integration.
