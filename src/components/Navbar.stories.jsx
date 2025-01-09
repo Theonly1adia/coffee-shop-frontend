@@ -1,4 +1,4 @@
-import Navbar from './Navbar';
+import Navbar from './NavBar';
 
 const meta = {
   component: Navbar,
@@ -6,4 +6,8 @@ const meta = {
 
 export default meta;
 
-export const Default = {};
+export const Default = {
+  args: {
+    title: "Products"
+  }
+};

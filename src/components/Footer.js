@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
-export default function Footer({title}) {
-  return <div className="footer">Footer Component {title}</div>;
+
+export default function Footer({content}) {
+  return <div className="footer">{content}</div>;
 }
 Footer.propTypes = {
   // Add prop-types here
-   title: PropTypes.string.isRequired,
+   content: PropTypes.string.isRequired,
 }
