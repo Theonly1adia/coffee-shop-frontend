@@ -14,8 +14,14 @@ const geistMono = Geist_Mono({
 export default function Home() {
   return (
   <div>
-    <h1>Coffee Shop Frontend Splash Page</h1>
-    <button className="btn btn-primary">Button</button>
+    <h1>Krewe de Cafe</h1>
+    <div className="hero">
+      <img src="/Splash-page.jpg" alt="coffe shop"/>
+      <p>
+        Where every Brew's a Celebration!
+      </p>
+    </div>
+    <button className="btn btn-primary">SignUp</button>
   </div>
-  )
+  );
 }
