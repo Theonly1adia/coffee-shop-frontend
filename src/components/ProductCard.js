@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';
 import Button from '@/components/Button';
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, addToCart }) {
   return (
     <div className="card glass w-96">
       <figure>
@@ -17,7 +17,7 @@ export default function ProductCard({ product }) {
         <div className="card-actions justify-end">
           <Button
             label="Add to Cart"
-            handleClick={() => onAddToCart(product)}/>
+            handleClick={() => addToCart(product)}/>
         </div>
       </div>
     </div>

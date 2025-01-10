@@ -14,6 +14,6 @@ export default function ProductPage() {
     console.log(`Add to cart clicked for product #${id}`);
   }
   return (
-    <ProductCard product={product}/>
+    <ProductCard product={product} addToCart={addToCart}/>
   );
 }
