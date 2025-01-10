@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 export default function NavBar({ title }) {
   return (
-    <div className="navbar bg-base-100 flex items-center justify-between">
+    <div className="navbar border-b-2 border-black  pb-2 bg-base-100 flex items-center justify-between">
       {/* Title */}
       <div className="text-xl font-bold">{title}</div>
 

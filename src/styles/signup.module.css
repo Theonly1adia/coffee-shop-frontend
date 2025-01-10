@@ -1,0 +1,46 @@
+/* src/styles/signup.module.css */
+.signupPage {
+    background-image: url('/Splash-page.jpg'); /* Corrected background image path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center */
+    align-items: center; /* Horizontally center */
+    color: white;
+    text-align: center;
+  }
+  
+  .signupHeading {
+    margin-bottom: 20px;
+  }
+  
+  .signupForm {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .signupForm input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  .signupForm button {
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .signupForm button:hover {
+    background-color: #0056b3;
+  }
+  

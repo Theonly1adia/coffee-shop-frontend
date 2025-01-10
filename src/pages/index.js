@@ -1,4 +1,5 @@
 import NavBar from "@/components/NavBar";
+import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import Button from '../components/Button';
@@ -15,6 +16,9 @@ export default function Home() {
       {/* Navbar component */}
       <NavBar title="Krewe De Cafe" items={['Home', 'About', 'Menu']} />
 
+      <Header content ="
+          Where every Brew's a Celebration!
+        "/>
       {/* Hero component */}
       <Hero />
       <Button label="Sign Up Now" handleClick={handleCtaClick} />
