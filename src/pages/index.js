@@ -31,7 +31,7 @@ export default function Home() {
         "/>
       {/* Hero component */}
       <Hero />
-      <Events/>
+      {/* <Events/> */}
       <Button label="Sign Up Now" handleClick={handleCtaClick} />
       <Footer content= "Adia Holt @2025"/>
     </div>

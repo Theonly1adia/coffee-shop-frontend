@@ -1,8 +1,16 @@
-/* export default function LoginPage(){
-    return (
-        <form className="form">
-            <input type=""
+import LoginForm from "@/components/LoginForm";
+import {useRouter} from "next/router";
 
-        
+export default function LoginPage() {
+    const router = useRouter();
+
+    function handleLogin() {
+        alert("Login successful!")
+    }
+
+    return (
+        <div>
+            <LoginForm/>
+        </div>
     )
-} */
+}

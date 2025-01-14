@@ -1,20 +1,38 @@
 import {useState, useEffect} from "react";
-import data from "../../mocks/products.json";
+//import product from "../../mocks/products.json";
 import React from "react";
 import NavBar from "@/components/NavBar";
 import ProductCard from "@/components/ProductCard";
+import { saveCartToLocalStorage, loadCartFromLocalStorage} from '../../../utils';
+
 
 export default function ProductsPage() {
 
   const [products, setProducts] = useState([]);
+  const [cartContents, setCartContents] = useState([]);
+
   useEffect(() => {
-    setProducts(data)
+
+    const cartData = loadCartFromLocalStorage();
+
+     setCartContents(cartData);
+     setProducts(product);
+
   }, []);
 
+  function addProductToCart(product) {
+  const newCartContents = [ ...cartContents, product];
+  setCartContents(newCartContents);
+
+  saveCartToLocalStorage(newCartContents);
+
+
+ }
   const productsJSX = products.map((product) => {
    
     function addToCart() {
       alert("clicked add to cart" + product.name);
+      addProductToCart(product);
     }
    
     return (<ProductCard

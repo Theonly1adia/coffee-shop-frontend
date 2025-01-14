@@ -1,6 +1,8 @@
+import Link from 'next/link';
 import PropTypes from 'prop-types';
 
 export default function NavBar({ title }) {
+  
   return (
     <div className="navbar border-b-2 border-black  bg-black bg-opacity-50 pb-2  flex items-center justify-between">
       {/* Title */}
@@ -13,8 +15,14 @@ export default function NavBar({ title }) {
         <a href="#" className="menu-item">Menu</a>
       </div>
 
-      {/* Sign Up Button */}
-      <button className="btn btn-primary">Sign Up</button>
+      <Link href="/login" passHref>
+      <button 
+      className="btn btn-primary"
+      
+      >
+        Log In
+        </button>
+        </Link>
     </div>
   );
   
