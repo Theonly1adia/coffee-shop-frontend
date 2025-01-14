@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "title": "Coffee Brewing 101",
+      "description": "Learn the basics of brewing the perfect cup of coffee at home.",
+      "date": "Saturday, Jan 13th",
+      "time": "3:00 PM - 4:00 PM",
+      "host": "Hosted by Barista Alex",
+      "image": "/images/brewing101.jpg",
+      "link": "https://example.com/register/coffee101"
+    },
+    {
+      "id": 2,
+      "title": "Latte Art Workshop",
+      "description": "Master the art of making beautiful latte designs.",
+      "date": "Sunday, Jan 14th",
+      "time": "5:00 PM - 6:00 PM",
+      "host": "Hosted by Latte Artist Mia",
+      "image": "/images/latteArt.jpg",
+      "link": "https://example.com/register/latteart"
+    }
+  ]
+  

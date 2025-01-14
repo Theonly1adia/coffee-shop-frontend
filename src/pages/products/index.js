@@ -1,9 +1,15 @@
-import products from "../../mocks/products.json";
+import {useState, useEffect} from "react";
+import data from "../../mocks/products.json";
 import React from "react";
 import NavBar from "@/components/NavBar";
 import ProductCard from "@/components/ProductCard";
 
 export default function ProductsPage() {
+
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    setProducts(data)
+  }, []);
 
   const productsJSX = products.map((product) => {
    
@@ -14,6 +20,7 @@ export default function ProductsPage() {
     return (<ProductCard
       key={product.id}
       product={product}
+      buttonLabel={"Add to Cart"}
       addToCart={() => addToCart(product)} // Pass product to addToCart
     />)
   });

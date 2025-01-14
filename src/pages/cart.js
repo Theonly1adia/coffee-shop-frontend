@@ -1,12 +1,17 @@
+import {useState, useEffect} from "react";
 import ProductCard from "@/components/ProductCard";
 import cart from "@/mocks/cart.json";
 import Button from "@/components/Button";
 
 export default function Cart() {
-    const cartContents = cart.products;
+    const [cartContents, setCartContents] = useState([]);
+
+    useEffect(() => {
+      setCartContents(cart.products);
+    }, []);
 
     function removefromCart(productName) {
-            alert("Clicked remove from cart" + productName)
+            alert("removed" + productName)
         }
 
     const cartJSX = cartContents.map((product) => (
