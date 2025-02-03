@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-[300px] bg-gradient-to-b opacity-85 from-purple-800 to-green-600 text-white mt-[25vh] flex items-center justify-center">
+    <section className="relative w-full h-[300px] bg-gradient-to-b mb-20 opacity-85 from-purple-800 to-green-600 text-white mt-[25vh] flex items-center justify-center">
 
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-black opacity-40"></div> 
