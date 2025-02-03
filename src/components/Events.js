@@ -1,4 +1,5 @@
 import React from "react";
+import Slider from "react-slick";
 
 const events = [
   {
@@ -24,6 +25,9 @@ const events = [
 ];
 
 export default function VirtualCafeEvents() {
+
+ 
+  
   return (
     <div className="bg-gray-100 py-8">
       <h2 className="text-4xl font-bold text-center mb-6">Virtual Café Events</h2>
@@ -47,12 +51,10 @@ export default function VirtualCafeEvents() {
               </p>
               <p className="text-sm text-gray-500">{event.host}</p>
               <a
-                href={event.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block mt-4 text-center text-white bg-yellow-500 hover:bg-yellow-600 px-4 py-2 rounded-lg"
-              >
-                Register Now
+          href="/events"
+          className="inline-block bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300"
+        >
+                View All Events
               </a>
             </div>
           </div>

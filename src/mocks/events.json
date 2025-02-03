@@ -18,6 +18,14 @@
       "host": "Hosted by Latte Artist Mia",
       "image": "/images/latteArt.jpg",
       "link": "https://example.com/register/latteart"
+    },
+    {
+      "id": 3,
+      "title": "Coffee and Chill Hangout",
+      "date": "February 15th, 2025",
+      "time": "5:00 PM EST",
+      "description": "A casual virtual meetup for coffee lovers to chat and connect.",
+      "image": "https://via.placeholder.com/150"
     }
   ]
   

@@ -4,6 +4,8 @@ import Hero from "@/components/Hero";
 import Events from "@/components/Events";
 import Footer from "@/components/Footer";
 import Button from '../components/Button';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import {useRouter} from 'next/router';
 
 
@@ -26,13 +28,16 @@ export default function Home() {
     <div className="absolute top-0 left-0 w-full ">
       <NavBar title="Krewe De Cafe" items={['Home', 'About', 'Menu']} />
       </div>
-      <Header content ="
+      {/* <Header content ="
           Where every Brew's a Celebration!
-        "/>
+        "/> */}
       {/* Hero component */}
-      <Hero />
+       <Hero />     
+       
+         {/* <Events/> */}
+      {/* <Button label="Sign Up Now" handleClick={handleCtaClick} /> */}
+
       {/* <Events/> */}
-      <Button label="Sign Up Now" handleClick={handleCtaClick} />
       <Footer content= "Adia Holt @2025"/>
     </div>
     

@@ -1,12 +1,10 @@
-import { useState, useEffect } from "react";
-import productData from "../../mocks/products.json";
+import { useState, useEffect } from "react";  
 import { useRouter } from 'next/router';
-import React from "react";
 import NavBar from "@/components/NavBar";
 import ProductCard from "@/components/ProductCard";
-import { saveCartToLocalStorage, loadCartFromLocalStorage } from '../../../utils';
-import useAuth from "../../../hooks/auth";
-import { useAuthFetch } from "../../../hooks/api";
+import { saveCartToLocalStorage, loadCartFromLocalStorage } from "../../../../utils";
+import useAuth from "../../../../hooks/auth";
+import { useAuthFetch } from "../../../../hooks/api";
 
 const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
@@ -15,12 +13,11 @@ export default function ProductsPage() {
   const { category } = router.query;
   console.log(category);
 
-  const { token, isAuthenticated } = useAuth();
+  const { token } = useAuth();
   console.log(token);
 
   /* const [products, setProducts] = useState([]); */
   const [cartContents, setCartContents] = useState([]);
-
   const [url, setUrl] =useState(`${BACKEND_URL}/products`);
   const [productFetchError, productsLoading, products] = useAuthFetch(url, [], token );
 
@@ -32,39 +29,40 @@ export default function ProductsPage() {
     /* setProducts(productData); // Set initial product data */
   }, []);
 
-  /* useEffect(() => {
-    if (category) {
-      const filteredProductData = productData.filter((product) => {
-        return product.category === category;
-      });
-      setProducts(filteredProductData);
-    } else {
-      setProducts(productData); // Reset to all products when no category is selected
-    }
-  }, [category]); // Dependency array includes `category` */
+  async function deleteProduct(product) {
+    console.log("delete", product)
+    try{
+        const response = await fetch (`${BACKEND_URL}/products/${productId}`,{
+            method: "DELETE",
+            headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+        },
+    });
 
-  function addProductToCart(product) {
-    const newCartContents = [...cartContents, product];
-    setCartContents(newCartContents);
-    saveCartToLocalStorage(newCartContents);
+        if(!response.ok){
+            throw new Error("Failed to delete product");
+        }
+
+        const data= await response.json();
+        console.log(data);
+
+        //Updates product list after deletion
+        setUrl(`${BACKEND_URL}/products`);
+        } catch(error) {
+        console.log("Error deleting product", error);
+    }
   }
 
-  const productsJSX = products.map((product) => {
-    function addToCart() {
-      alert("Clicked add to cart: " + product.name);
-      addProductToCart(product);
-    }
-
-    return (
-      <ProductCard
-        key={product.id}
-        product={product}
-        buttonLabel={"Add to Cart"}
-        addToCart={addToCart}
-      />
-    );
-  });
-
+  const productsJSX = products.map((product) => (
+    <ProductCard
+      key={product._id}
+      product={product}
+      buttonLabel="Delete"
+      addToCart={() => deleteProduct(product._id)}
+    />
+  ));
+  
   return (
     <div>
       <NavBar />
@@ -77,7 +75,7 @@ export default function ProductsPage() {
           </div>
         ) : ""
       }
-<div className="flex justify-evenly">
+<div className="flex justify-evenly my-4">
         <span onClick={() => setUrl(`${BACKEND_URL}/products?category=beverages`)}>
           Beverages
         </span>

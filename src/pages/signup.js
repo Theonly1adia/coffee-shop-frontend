@@ -27,7 +27,6 @@ export default function Signup() {
       }}
       >
       <Navbar />
-      <h1>Sign Up</h1>
       <SignupForm buttonLabel="Sign Up" handleSignup={() => console.log('Sign up clicked!')}/>
       <Footer />
     </div>
