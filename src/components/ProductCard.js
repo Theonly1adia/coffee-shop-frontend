@@ -1,8 +1,29 @@
+import React from "react";
 import PropTypes from 'prop-types';
-export default function ProductCard({title}) {
-  return <div className="productCard">Product Card {title}</div>;
+import Button from '@/components/Button';
+
+export default function ProductCard({ product, addToCart, buttonLabel }) {
+  return (
+    <div className="card glass w-96">
+      <figure>
+        <img
+        src={product.imageUrl}
+        alt={product.name}/>
+      </figure>
+      <div className="card-body">
+        <h2 className="card-title">{product.name}</h2>
+        <p>${product.description}</p>
+        <p>${product.price}</p>
+        <div className="card-actions justify-end">
+          <Button
+            label={buttonLabel}
+            handleClick={() => addToCart(product)}/>
+        </div>
+      </div>
+    </div>
+  );
 }
+
 ProductCard.propTypes = {
-  // Add prop-types here
-   title: PropTypes.string.isRequired,
+  product: PropTypes.object.isRequired,
 };

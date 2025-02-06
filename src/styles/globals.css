@@ -2,20 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.home-page {
+    background-image: url('/Splash-page.jpg'); /* Path to your image */
+    background-size: cover; /* Makes the image cover the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    min-height: 100vh; /* Ensures it takes the full viewport height */
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Stacks child elements vertically */
+    justify-content: center; /* Centers child elements vertically */
+    align-items: center; /* Centers child elements horizontally */
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+  
