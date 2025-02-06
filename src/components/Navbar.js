@@ -11,8 +11,8 @@ export default function Navbar({ title }) {
       
       <div className="flex space-x-10">
         <a href="/" className="menu-item">Home</a>
-        <a href="#" className="menu-item">About</a>
-        <a href="#" className="menu-item">Menu</a>
+        <a href="/products" className="menu-item">Products</a>
+        <a href="/events" className="menu-item">Events</a>
       </div>
 
       <Link href="/login" passHref>

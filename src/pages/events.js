@@ -1,5 +1,6 @@
 import React from "react";
 import VirtualCafeEvents from "@/components/Events";  
+import Navbar from "@/components/Navbar";
 
 export default function EventsPage() {
   return (
@@ -17,12 +18,15 @@ export default function EventsPage() {
         alignItems: 'center',
         color: 'white',
       }}>
+
+        <Navbar/>
       <header className="bg-purple-600 text-white py-4">
         <div className="text-center">
           <h1 className="text-3xl font-bold">Upcoming Events</h1>
           <p className="mt-2 text-lg">Join us for exciting virtual café events!</p>
         </div>
       </header>
+
       
       <main className="py-8">
         <VirtualCafeEvents />

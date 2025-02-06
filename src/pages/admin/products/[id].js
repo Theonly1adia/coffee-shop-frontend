@@ -8,7 +8,7 @@ export default function AdminProduct() {
     const {token} =useAuth();
   return (
     <>
-      <NavBar />
+      <Navbar />
       <Footer content="@Adia 2025"/>
     </>
   );
