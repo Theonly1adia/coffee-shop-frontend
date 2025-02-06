@@ -7,4 +7,4 @@ export default function ThankYou () {
             <p className="mt-4"> We appreciate you joining us.</p>
         </div>
     )
-}-you
+}

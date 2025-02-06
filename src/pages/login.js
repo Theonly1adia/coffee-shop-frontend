@@ -1,6 +1,6 @@
 import { useState } from "react";
 import LoginForm from "@/components/LoginForm";
-import NavBar from "@/components/NavBar";
+import Navbar from "@/components/Navbar";
 import { useRouter } from "next/router";
 
 export default function LoginPage() {
@@ -52,7 +52,7 @@ export default function LoginPage() {
       color: 'white',
     }}
     >
-      <NavBar />
+      <Navbar />
       {error && (
         <div className="text-red-400 text-sm">
             Error: {errorMessage}

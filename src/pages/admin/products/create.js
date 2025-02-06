@@ -1,4 +1,4 @@
-import NavBar from "@/components/NavBar";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Button from "@/components/Button";
 import useAuth from "../../../../hooks/auth";
@@ -55,7 +55,7 @@ export default function CreateProduct() {
 
   return (
     <>
-      <NavBar />
+      <Navbar />
       <div 
       className="flex justify-center items-center min-h-screen bg-gray-900 text-white "
       style={{ backgroundImage: "url('/beads.jpeg')", backgroundSize: "cover", backgroundPosition: "center" }}

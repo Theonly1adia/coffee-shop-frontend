@@ -1,4 +1,4 @@
-import NavBar from "@/components/NavBar";
+import Navbar from "@/components/Navbar";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Events from "@/components/Events";
@@ -26,7 +26,7 @@ export default function Home() {
       }}
     >
     <div className="absolute top-0 left-0 w-full ">
-      <NavBar title="Krewe De Cafe" items={['Home', 'About', 'Menu']} />
+      <Navbar title="Krewe De Cafe" items={['Home', 'About', 'Menu']} />
       </div>
       {/* <Header content ="
           Where every Brew's a Celebration!
