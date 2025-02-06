@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./Navbar";
+
 
 const events = [
   {
@@ -40,7 +40,7 @@ export default function VirtualCafeEvents() {
         <h2 className="text-4xl font-bold text-purple-600">Virtual Café Events</h2>
       </div>
       
-      <Navbar/>
+      
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-3xl mx-auto">
         {events.map((event) => (

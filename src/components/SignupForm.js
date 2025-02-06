@@ -28,7 +28,7 @@ export default function SignupForm({ buttonLabel, handleSignup }) {
     handleSignup(user);
     
     // After successful signup, navigate to the products page
-    router.push('/products');  // This will navigate to '/products'
+    router.push('/thank-you');  // This will navigate to '/products'
   }
 
   const handleChange = (e) => {
