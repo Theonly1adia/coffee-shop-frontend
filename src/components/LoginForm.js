@@ -13,22 +13,21 @@ export default function LoginForm({ buttonLabel, handleLogin }) {
   
 
   return (
-    <div className="container px-4 mx-auto">
-      <div className="max-w-lg mx-auto">
+    <div className="w-120 backdrop-blur-lg bg-opacity-50 rounded-lg shadow-lg p-8 bg-gray-900 text-white">
         
         <div className="text-center mb-6">
-          <h2 className="text-3xl md:text-4xl font-extrabold">Sign in</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold">Login</h2>
         </div>
         
          
         <form onSubmit={handleSubmit}>
           
           <div className="mb-6">
-            <label className="block mb-2 font-extrabold" htmlFor="email">Email</label>
+            <label className="block mb-2 font-medium" htmlFor="email">Email</label>
             <input
               id="email"
               name="email"
-              className="inline-block w-full p-4 leading-6 text-lg font-extrabold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded"
+              className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-full py-2.5 px-4 "
               type="email"
               placeholder="email@example.com"
               required
@@ -41,7 +40,7 @@ export default function LoginForm({ buttonLabel, handleLogin }) {
             <input
               id="password"
               name="password"
-              className="inline-block w-full p-4 leading-6 text-lg font-extrabold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded"
+              className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-full py-2.5 px-4 "
               type="password"
               placeholder="**********"
               required
@@ -80,7 +79,7 @@ export default function LoginForm({ buttonLabel, handleLogin }) {
             </a>
           </p>
         </form>
-      </div>
+      
     </div>
   );
 }

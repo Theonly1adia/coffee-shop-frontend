@@ -33,14 +33,14 @@ const events = [
 
 export default function VirtualCafeEvents() {
   return (
-    <div className="py-8 bg-white bg-opacity-60 pl-5 pr-5">
+    <div className="py-4 bg-white bg-opacity-60 pl-4 pr-4">
       
       <div className="text-center mb-6 bg-white">
         <h2 className="text-4xl font-bold text-purple-600">Virtual Café Events</h2>
       </div>
 
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-3xl mx-auto">
         {events.map((event) => (
           <div
             key={event.id}
@@ -52,7 +52,7 @@ export default function VirtualCafeEvents() {
               alt={event.title}
               className="w-full h-1/2 object-cover" 
             />
-            <div className="p-4 space-y-2 flex-1"> 
+            <div className="p-2 space-y-2 flex-1"> 
               <h3 className="text-xl font-semibold">{event.title}</h3>
               <p className="text-gray-600">{event.description}</p>
               <p className="text-sm text-gray-500">

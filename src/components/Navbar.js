@@ -10,7 +10,7 @@ export default function NavBar({ title }) {
 
       
       <div className="flex space-x-10">
-        <a href="#" className="menu-item">Home</a>
+        <a href="/" className="menu-item">Home</a>
         <a href="#" className="menu-item">About</a>
         <a href="#" className="menu-item">Menu</a>
       </div>
