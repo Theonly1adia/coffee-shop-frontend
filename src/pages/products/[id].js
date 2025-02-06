@@ -11,7 +11,7 @@ export default function ProductPage() {
   const [error, setError] = useState(null);
 
   async function fetchProduct(productId) {
-    if (!productId) return; // 
+    if (!productId) return; // ✅ Prevents API call with undefined ID
 
     console.log(`Fetching product with ID: ${productId}`);
     try {
@@ -29,6 +29,18 @@ export default function ProductPage() {
 
   useEffect(() => {
     if (id) {
-      fetchProduct(id); 
+      fetchProduct(id); // ✅ Now uses dynamic ID instead of hardcoded one
     }
-  }, [id]); 
+  }, [id]); // ✅ Only fetches when ID changes
+
+  function addToCart() {
+    alert(`Add to cart clicked for product #${id}`);
+    console.log(`Add to cart clicked for product #${id}`);
+  }
+
+  if (loading) return <p>Loading product...</p>;
+  if (error) return <p>{error}</p>;
+  if (!product) return <p>Product not found.</p>;
+
+  return <ProductCard product={product} addToCart={addToCart} />;
+}
