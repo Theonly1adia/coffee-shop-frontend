@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import productData from "../../mocks/products.json";
 import { useRouter } from 'next/router';
 import React from "react";
-import NavBar from "@/components/NavBar";
+import Navbar from "@/components/Navbar";
 import ProductCard from "@/components/ProductCard";
 import { saveCartToLocalStorage, loadCartFromLocalStorage } from '../../../utils';
 import useAuth from "../../../hooks/auth";
@@ -67,7 +67,7 @@ export default function ProductsPage() {
 
   return (
     <div>
-      <NavBar />
+      <Navbar />
       <h1 className="text-4xl font-bold text-center my-6">Our Products</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
       {
