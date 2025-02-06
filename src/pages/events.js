@@ -3,7 +3,20 @@ import VirtualCafeEvents from "@/components/Events";
 
 export default function EventsPage() {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-100"
+    style={{
+        backgroundImage: 'url(beads.jpeg)', 
+        backgroundSize: 'cover',  
+        backgroundPosition: 'center', 
+        height: '100vh', 
+        minHeight: "100vh",
+        width: "100%",
+        display: 'flex', 
+        flexDirection: 'column', 
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        color: 'white',
+      }}>
       <header className="bg-purple-600 text-white py-4">
         <div className="text-center">
           <h1 className="text-3xl font-bold">Upcoming Events</h1>

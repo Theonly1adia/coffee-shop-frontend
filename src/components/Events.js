@@ -33,7 +33,7 @@ const events = [
 
 export default function VirtualCafeEvents() {
   return (
-    <div className="py-4 bg-white bg-opacity-60 pl-4 pr-4">
+    <div className="py-4 bg-white bg-opacity-50 pl-4 pr-4">
       
       <div className="text-center mb-6 bg-white">
         <h2 className="text-4xl font-bold text-purple-600">Virtual Café Events</h2>
