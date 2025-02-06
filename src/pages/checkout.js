@@ -31,7 +31,19 @@ export default function Checkout() {
         nextStep();
     }
     return (
-        <div>
+        <div
+        style={{
+            backgroundImage: 'url(Splash-page.jpg)', // Path to your background image
+            backgroundSize: 'cover',  // Ensures the image covers the whole container
+            backgroundPosition: 'center', // Centers the image
+            height: '100vh', // Make the background cover the whole viewport height
+            display: 'flex', 
+            flexDirection: 'column', 
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            color: 'white',
+          }}>
+            
             <Stepper currentStep={currentStep} steps={steps} />
             
             {currentStep === 0 && <CheckoutForm handleCheckout={handleCheckout} />}

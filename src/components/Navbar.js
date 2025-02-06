@@ -28,6 +28,6 @@ export default function Navbar({ title }) {
   
 }
 
-NavBar.propTypes = {
+Navbar.propTypes = {
   title: PropTypes.string.isRequired,
 };
