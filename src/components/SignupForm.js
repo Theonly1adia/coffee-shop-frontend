@@ -13,29 +13,25 @@ export default function SignupForm({ buttonLabel, handleSignup }) {
     email: '',
     password: '',
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const router = useRouter();
 
   const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    if (emailIsValid && passwordIsValid) {
-      setIsSubmitting(true);
-      const user = {
-        name: formData.name,
-        email: formData.email,
-        password: formData.password,
-      };
-      handleSignup(user)
-        .then(() => {
-          router.push('/thank-you');
-        })
-        .catch((err) => {
-          console.error('Signup failed:', err);
-          setIsSubmitting(false);
-        });
+    const user = {
+      name: formData.name,
+      email: formData.email,
+      password: formData.password,
+    };
+    try {
+      const signupResult = await handleSignup(user);
+      // After successful signup, navigate to the thank-you page
+      router.push('/thank-you');
+    } catch (error) {
+      console.error('Signup failed:', error);
+      // Handle signup failure (e.g., display an error message)
     }
   }
 
@@ -110,7 +106,7 @@ export default function SignupForm({ buttonLabel, handleSignup }) {
           )}
         </div>
 
-        <Button label={buttonLabel} handleClick={handleSubmit} disabled={isSubmitting || !(emailIsValid && passwordIsValid)} />
+        <Button label={buttonLabel} handleClick={handleSubmit} />
         <div className="flex items-center text-sm pt-4">
           <p>Already have an account?</p>
           <p className="underline cursor-pointer ml-1">Sign in</p>
