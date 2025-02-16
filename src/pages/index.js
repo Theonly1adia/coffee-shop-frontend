@@ -4,8 +4,6 @@ import Hero from "@/components/Hero";
 import Events from "@/components/Events";
 import Footer from "@/components/Footer";
 import Button from '../components/Button';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import {useRouter} from 'next/router';
 
 

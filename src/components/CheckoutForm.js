@@ -1,14 +1,16 @@
 import PropTypes from 'prop-types';
-import Button from '@/components/Button'
+import Button from '@/components/Button';
 
 export default function CheckoutForm({ handleCheckout }) {
 
     function handleSubmit(event) {
         event.preventDefault();
         const name = event.target.elements.name.value;
-        const email = event.target.elements.email.value;
+        const email = event.target.elements.email?.value; // Adjust based on needs
+        const address = event.target.elements.address?.value; // Adjust based on needs
         const phone = event.target.elements.phone.value;
-        handleCheckout(name, email, phone);
+        
+        handleCheckout(name, email || address, phone);
     }
 
     return (
@@ -20,7 +22,9 @@ export default function CheckoutForm({ handleCheckout }) {
                     <input
                         type="text"
                         id="name"
+                        name="name"
                         placeholder="Enter your name"
+                        required
                         className="mt-2 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                 </div>
@@ -28,9 +32,21 @@ export default function CheckoutForm({ handleCheckout }) {
                 <div className="flex flex-col">
                     <label htmlFor="email" className="text-sm font-medium text-gray-600">Email</label>
                     <input
-                        type="text"
+                        type="email"
                         id="email"
-                        placeholder="Enter your  Email address"
+                        name="email"
+                        placeholder="Enter your email address"
+                        className="mt-2 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                </div>
+
+                <div className="flex flex-col">
+                    <label htmlFor="address" className="text-sm font-medium text-gray-600">Address</label>
+                    <input
+                        type="text"
+                        id="address"
+                        name="address"
+                        placeholder="Enter your address"
                         className="mt-2 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                 </div>
@@ -38,9 +54,11 @@ export default function CheckoutForm({ handleCheckout }) {
                 <div className="flex flex-col">
                     <label htmlFor="phone" className="text-sm font-medium text-gray-600">Phone Number</label>
                     <input
-                        type="phone"
+                        type="tel"
                         id="phone"
+                        name="phone"
                         placeholder="Enter your phone number"
+                        required
                         className="mt-2 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                 </div>
@@ -50,7 +68,7 @@ export default function CheckoutForm({ handleCheckout }) {
                 </div>
             </form>
         </div>
-    )
+    );
 }
 
 CheckoutForm.propTypes = {
